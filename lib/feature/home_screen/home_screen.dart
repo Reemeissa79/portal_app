@@ -120,45 +120,45 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 36),
 
               // Chat With Your Doctor Button (UPDATED)
-              Center(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF4285F4),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 5,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              ChatListScreen()), // Navigate to ChatListScreen
-                    );
-                  },
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.message, color: Colors.white, size: 24),
-                      SizedBox(width: 12),
-                      Text(
-                        'Chat With Your Doctor',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(width: 12),
-                      Icon(Icons.arrow_forward_ios,
-                          color: Colors.white, size: 18),
-                    ],
-                  ),
-                ),
-              ),
+              // Center(
+              //   child: ElevatedButton(
+              //     style: ElevatedButton.styleFrom(
+              //       backgroundColor: const Color(0xFF4285F4),
+              //       padding: const EdgeInsets.symmetric(
+              //           horizontal: 30, vertical: 16),
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(20),
+              //       ),
+              //       elevation: 5,
+              //     ),
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) =>
+              //                 ChatListScreen()), // Navigate to ChatListScreen
+              //       );
+              //     },
+              //     child: const Row(
+              //       mainAxisSize: MainAxisSize.min,
+              //       children: [
+              //         Icon(Icons.message, color: Colors.white, size: 24),
+              //         SizedBox(width: 12),
+              //         Text(
+              //           'Chat With Your Doctor',
+              //           style: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 18,
+              //             fontWeight: FontWeight.bold,
+              //           ),
+              //         ),
+              //         SizedBox(width: 12),
+              //         Icon(Icons.arrow_forward_ios,
+              //             color: Colors.white, size: 18),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               const SizedBox(height: 20),
             ],
           ),

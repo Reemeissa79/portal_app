@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portal_app/core/utils/shared_widgets/app_text.dart';
 
 import '../login_screen/login_screen.dart';
 
@@ -70,6 +71,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: const Color(0xFFFAFAFA), // Consistent light background
       body: SafeArea(
         child: SingleChildScrollView(
@@ -175,7 +177,39 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   children: <Widget>[
                     _buildOptionRow('Courses Enrolled', icon: Icons.book,
-                        onTap: () {/* Navigate */}),
+                        onTap: () {
+                      /* Navigate */
+                      showModalBottomSheet( //!Sheet
+                        context: context,
+                        isScrollControlled: true, // This is crucial
+                        builder: (context) {
+                          return Padding(
+                            // Add padding to handle the keyboard
+                            padding: EdgeInsets.only(
+                              bottom: MediaQuery.of(context).viewInsets.bottom,
+                            ),
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  // Your content here
+                                  TextFormField(),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  AppText("text"),
+                                  // Other widgets
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    }),
                     _buildOptionRow('Current Semester', icon: Icons.date_range,
                         onTap: () {/* Navigate */}),
                     _buildOptionRow('Grades / GPA', icon: Icons.bar_chart,
